@@ -30,6 +30,10 @@ Reducing power consumption in modern VLSI circuits and systems has become signif
 <b>• Synopsys 28nm PDK:</b></br>
 &emsp;The Synopsys 28nm Process Design Kit(PDK) was used in creation and simulation of the above designed circuit.
 
+# Netlist of the Circuit:
+
+Refer to the netlist of the circuit here: <a href='differential_CSVCO.cir.out'>Netlist</a>
+
 # Author:
 • Tarush Singh, B.E(ECE), MCT Rajiv Gandhi Institute of Technology, Andheri, Versova-400053.
 
