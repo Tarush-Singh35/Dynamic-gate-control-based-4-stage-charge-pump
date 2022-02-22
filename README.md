@@ -31,6 +31,21 @@ Reducing power consumption in modern VLSI circuits and systems has become signif
 <b>• Synopsys 28nm PDK:</b></br>
 &emsp;The Synopsys 28nm Process Design Kit(PDK) was used in creation and simulation of the above designed circuit.
 
+# Pre-Layout Schematics and Simulations:
+
+## Schematics:
+
+### Charge Pump Circuit:
+Initially Schematic of the Dynamic Gate Charge pump cell was implemented and converted into a symbol so that it could be used directly as cell from the library.
+<p align="center">
+  <img src="Images/Final_out_circuit_1.png"></br>
+  Fig. 4: Dynamic Gate Charge Pump Cell Schematic
+</p>
+<p align="center">
+  <img src="Images/Final_out_symbol_symbol.png"></br>
+  Fig. 5: Dynamic Gate Charge Pump Symbol
+</p>
+
 # Netlist:
 
 Refer to the netlist of the circuit here: <a href='Dynamic_CP.cir'>Dynamic Charge Pump Circuit</a>
