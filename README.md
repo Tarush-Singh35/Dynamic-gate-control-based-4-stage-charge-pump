@@ -29,3 +29,16 @@ Reducing power consumption in modern VLSI circuits and systems has become signif
 
 <b>• Synopsys 28nm PDK:</b></br>
 &emsp;The Synopsys 28nm Process Design Kit(PDK) was used in creation and simulation of the above designed circuit.
+
+# Author:
+• Tarush Singh, B.E(ECE), MCT Rajiv Gandhi Institute of Technology, Andheri, Versova-400053.
+
+# Acknowledgements:
+• <a href='https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/'>Cloud Based Analog IC Design Hackathon</a></br>
+• <a href='https://www.synopsys.com/'>Synopsys India</a></br>
+• <a href='https://www.vlsisystemdesign.com/'>VLSI System Design (VSD) Corp. Pvt. Ltd India</a></br>
+
+# References:
+[1] P. Karuppanan, K. Khan, and S. R. Ghosh, “Dynamic gate and substrate control charge pump circuits,” in Analog Integrated Circuits and Signal Processing, April 2015.
+[2] H. Dadhich, V. Maurya, K. Verma, and S. Jaiswal, “Design and analysis of different type of charge pump using cmos technology,” in 2016 International Conference on Advances in Computing, Communications and Informatics (ICACCI), November 2016.
+[3] M. E. Alaoui, F. Farah, K. E. Khadiri, H. Qjidaa, A. Aarab, and R. E. Alami, “Analysis and design of dickson charge pump for eeprom in 180nm cmos technology,” in 2018 International Conference on Intelligent Systems and Computer Vision (ISCV), My 2018
