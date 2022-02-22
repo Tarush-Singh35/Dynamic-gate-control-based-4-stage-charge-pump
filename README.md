@@ -9,7 +9,7 @@ This repository presents the design of Dynamic-gate-control-based-4-stage-charge
  * [Working](#working)
  * [Designing](#designing)
  * [Tools Used](#Tools-Used)
- * [Pre-Layout Schematics and Simulations](#pre-Layout-Schematics-and-Simulations)
+ * [Schematics and Simulations](#schematics-and-Simulations)
  * [Netlist](#netlist)
  * [Observations](#observations)
  * [Author](#author)
@@ -19,6 +19,10 @@ This repository presents the design of Dynamic-gate-control-based-4-stage-charge
 # Introduction:
 
 Reducing power consumption in modern VLSI circuits and systems has become significant research due to more demand of low power memory devices. To reduce power consumption, the power supply voltage tends to be scaled down. It also reduces noise margin and speed of operation, which is not favour in digital circuits. The performance of the low power memory device depends on physical mechanisms of oxide tunneling which need constant high voltage irrespective of the MOS technology and scaling. Furthermore, low power devices such as EEPROM and flash memories require higher voltage to perform write and erase operations. Consequently,to design on-chip memory circuits with low power supply voltage is very difficult and critical challenge for nonvolatile memory applications. However, this problem is solved by charge pump (CP) circuits. The CP circuit provides higher on-chip voltage with low power supply voltage. The CP circuit utilize charge transfer switches (CTS) for transferring charges and pumping capacitors as energy storage elements. CP circuits are used in nearly all EEPROM and flash memory devices.The CP circuit is also used in the power managementblocks of liquid-crystal-display (LCD) panels and quiescent touch sensor power supply circuits.
+
+# Working
+
+# Designing
 
 # Tools Used:
 
@@ -31,7 +35,7 @@ Reducing power consumption in modern VLSI circuits and systems has become signif
 <b>• Synopsys 28nm PDK:</b></br>
 &emsp;The Synopsys 28nm Process Design Kit(PDK) was used in creation and simulation of the above designed circuit.
 
-# Pre-Layout Schematics and Simulations:
+# Schematics and Simulations:
 
 ## Schematics:
 
@@ -39,19 +43,40 @@ Reducing power consumption in modern VLSI circuits and systems has become signif
 Initially Schematic of the Dynamic Gate Charge pump cell was implemented and converted into a symbol so that it could be used directly as cell from the library.
 <p align="center">
   <img src="Images/Final_out_circuit_1.png"></br>
-  Fig. 4: Dynamic Gate Charge Pump Cell Schematic
+  Fig.1: Dynamic Gate Charge Pump Cell Schematic
 </p>
 <p align="center">
   <img src="Images/Final_out_symbol_symbol.png"></br>
-  Fig. 5: Dynamic Gate Charge Pump Symbol
+  Fig.2: Dynamic Gate Charge Pump Symbol
+</p>
+<p align="center">
+  <img src="Images/Final_out_symbol_symbol.png"></br>
+  Fig.3: Dynamic Gate Charge Pump Circuit
+</p>
+
+## Simulations:
+### Transient Analysis:
+After creating and saving the schematic go to 'Tools' and open 'Primewave' to start the simulation. In the Primewave select the 'model file' i.e the '28nm PDK's .lib file presentin the HSPICE folder. After this select the 'tran' analysis in the analysis window and give the 'Start', 'Stop', and 'Step Size' parameters and save it. Then add the outputs which needs to be plotted by selecting the nets on the schematic and Add the function to Calculate the Risetime </br>
+Then go to 'Simulations -> Netlist and Run' to generate a netlist and run the simulation to get the below output.
+<p align="center">
+  <img src="Images/differential_CSVCO_tran.png"></br>
+  Fig.4: Dynamic Gate Charge Pump Transient Analysis
+</p>
+<b>Rise Time = 10.96 us </b>
+
+### Parametric Sweep:
+This is basically used to plot any output attribute over varying input attribute. Specific to this design we are going to vary the control voltage and supply voltage to plot the varying frequency. For this, in the schematic we have to give a variable in the 'DC Voltage' parameter of the VDC components. Then add this variables in the Primewave under variables window and select 'sweep' in that window for each variable. In the parametric sweep window give the 'Start', 'Stop' and 'Step Size'. In the outputs add the function to calculate <b>Gain = 2.77</b> for 1.8V and run the simulation to get the below output and analog Scalar Value.
+<p align="center">
+  <img src="Images/parametric_sweep_one variable.png"></br>
+  Fig.5: DC sweep of O/P for different I/O
 </p>
 
 # Netlist:
 
 Refer to the netlist of the circuit here: <a href='Dynamic_CP.cir'>Dynamic Charge Pump Circuit</a>
 
-# Observations:
-- The output voltage is 5V .The voltage gain has significantly improved as threshold voltage drop is removed and ON resistance of Charge Transfer Switch is reduced. Further, the substrate bias effect in the Charge Pump circuitis also removed.However operated in Strong inversion region has caused this circuit to have a trade-of between gain and speed hence the circuit can be used for high speed application but it has low noise margin as well as low SNR this can be seen in the transient analysis.
+# Observ ations:
+- The output voltage is 5V .The voltage gain has significantly improved as threshold voltage drop is removed and ON resistance of Charge Transfer Switch is reduced. Further, the substrate bias effect in the Charge Pump circuitis also removed.However operated in Strong inversion region has caused this circuit to have a trade-of between gain and speed hence the circuit can be used for high speed application that is indicated with low rise time as stated above but it has low noise margin as well as low SNR this can be seen in the transient analysis.
 
 # Author:
 • Tarush Singh, B.E(ECE), MCT Rajiv Gandhi Institute of Technology, Andheri, Versova-400053.
