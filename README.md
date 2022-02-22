@@ -32,7 +32,7 @@ Reducing power consumption in modern VLSI circuits and systems has become signif
 
 # Netlist of the Circuit:
 
-Refer to the netlist of the circuit here: <a href='differential_CSVCO.cir.out'>Netlist</a>
+Refer to the netlist of the circuit here: <a href='Dynamic_CP.cir'>Netlist</a>
 
 # Author:
 • Tarush Singh, B.E(ECE), MCT Rajiv Gandhi Institute of Technology, Andheri, Versova-400053.
