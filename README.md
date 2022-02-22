@@ -1,7 +1,8 @@
 # Dynamic-gate-control-based-4-stage-charge-pump
 The purpose of this Hackathon is to implement the proposed design in 28 nm PDK (Process Design Kit).
 As a result of literature survey and Implemantation, this is a final Report Submission for successful completion of Dynamic-gate-control-based-4-stage-charge-pump and simulation, for [Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/).
-- This repository presents the design of Dynamic-gate-control-based-4-stage-charge-pump implemented using Synopsis Custom Compiler on 28nm CMOS Technology.
+
+This repository presents the design of Dynamic-gate-control-based-4-stage-charge-pump implemented using Synopsis Custom Compiler on 28nm CMOS Technology.
 
 # Table of Contents
  * [Introduction](#introduction)
@@ -9,7 +10,7 @@ As a result of literature survey and Implemantation, this is a final Report Subm
  * [Designing](#designing)
  * [Tools Used](#Tools-Used)
  * [Pre-Layout Schematics and Simulations](#pre-Layout-Schematics-and-Simulations)
- * [Netlist of the Circuit](#netlist-of-the-Circuit)
+ * [Netlist](#netlist)
  * [Observations](#observations)
  * [Author](#author)
  * [Acknowledgements](#acknowledgements)
@@ -33,6 +34,9 @@ Reducing power consumption in modern VLSI circuits and systems has become signif
 # Netlist:
 
 Refer to the netlist of the circuit here: <a href='Dynamic_CP.cir'>Dynamic Charge Pump Circuit</a>
+
+# Observations:
+- The output voltage is 5V .The voltage gain has significantly improved as threshold voltage drop is removed and ON resistance of Charge Transfer Switch is reduced. Further, the substrate bias effect in the Charge Pump circuitis also removed.However operated in Strong inversion region has caused this circuit to have a trade-of between gain and speed hence the circuit can be used for high speed application but it has low noise margin as well as low SNR this can be seen in the transient analysis.
 
 # Author:
 • Tarush Singh, B.E(ECE), MCT Rajiv Gandhi Institute of Technology, Andheri, Versova-400053.
