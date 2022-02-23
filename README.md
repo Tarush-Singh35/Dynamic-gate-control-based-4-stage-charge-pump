@@ -86,13 +86,13 @@ Then go to 'Simulations -> Netlist and Run' to generate a netlist and run the si
 ### Parametric Sweep:
 This is basically used to plot any output attribute over varying input attribute. Specific to this design we are going to vary the control voltage and supply voltage to plot the varying frequency. For this, in the schematic we have to give a variable in the 'DC Voltage' parameter of the VDC components. Then add this variables in the Primewave under variables window and select 'sweep' in that window for each variable. In the parametric sweep window give the 'Start', 'Stop' and 'Step Size'. In the outputs add the function to calculate <b>Gain = 2.77</b> for 1.8V and run the simulation to get the below output and analog Scalar Value.
 <p align="center">
-  <img src="Images/gmbyid_proof_1.PNG"></br>
-  Fig.5: DC sweep of O/P for different I/O
+  <img src="Images/gmbyid_proof_2.PNG"></br>
+  Fig.5: DC sweep of O/P for different I/O 
 </p>
 
 # Netlist:
 
-Refer to the netlist of the circuit here: <a href='Dynamic_CP.cir'>Dynamic Gate Charge Pump Circuit</a>
+Refer to the netlist of the circuit here: <a href='Netlist and Logs/Dynamic_CP_Parametric.cir'>Dynamic Gate Charge Pump Circuit</a>
 
 # Observations:
 - The output voltage is 5V .The voltage gain has significantly improved as threshold voltage drop is removed and ON resistance of Charge Transfer Switch is reduced. Further, the substrate bias effect in the Charge Pump circuitis also removed.However operated in Strong inversion region has caused this circuit to have a trade-of between gain and speed hence the circuit can be used for high speed application that is indicated with low rise time as stated above but it has low noise margin as well as low SNR this can be seen in the transient analysis.
