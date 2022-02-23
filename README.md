@@ -50,7 +50,7 @@ Initially Schematic of the Dynamic Gate Charge pump cell was implemented and con
   Fig.2: Dynamic Gate Charge Pump Symbol
 </p>
 <p align="center">
-  <img src="Images/Final_out_symbol_symbol.png"></br>
+  <img src="Images/Final_out_symbol_cir.png"></br>
   Fig.3: Dynamic Gate Charge Pump Circuit
 </p>
 
@@ -59,7 +59,7 @@ Initially Schematic of the Dynamic Gate Charge pump cell was implemented and con
 After creating and saving the schematic go to 'Tools' and open 'Primewave' to start the simulation. In the Primewave select the 'model file' i.e the '28nm PDK's .lib file presentin the HSPICE folder. After this select the 'tran' analysis in the analysis window and give the 'Start', 'Stop', and 'Step Size' parameters and save it. Then add the outputs which needs to be plotted by selecting the nets on the schematic and Add the function to Calculate the Risetime </br>
 Then go to 'Simulations -> Netlist and Run' to generate a netlist and run the simulation to get the below output.
 <p align="center">
-  <img src="Images/differential_CSVCO_tran.png"></br>
+  <img src="Images/Final_out_1.png"></br>
   Fig.4: Dynamic Gate Charge Pump Transient Analysis
 </p>
 <b>Rise Time = 10.96 us </b>
@@ -67,7 +67,7 @@ Then go to 'Simulations -> Netlist and Run' to generate a netlist and run the si
 ### Parametric Sweep:
 This is basically used to plot any output attribute over varying input attribute. Specific to this design we are going to vary the control voltage and supply voltage to plot the varying frequency. For this, in the schematic we have to give a variable in the 'DC Voltage' parameter of the VDC components. Then add this variables in the Primewave under variables window and select 'sweep' in that window for each variable. In the parametric sweep window give the 'Start', 'Stop' and 'Step Size'. In the outputs add the function to calculate <b>Gain = 2.77</b> for 1.8V and run the simulation to get the below output and analog Scalar Value.
 <p align="center">
-  <img src="Images/parametric_sweep_one variable.png"></br>
+  <img src="Images/gmbyid_proof_1.png"></br>
   Fig.5: DC sweep of O/P for different I/O
 </p>
 
