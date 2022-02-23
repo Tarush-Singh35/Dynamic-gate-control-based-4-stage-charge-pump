@@ -7,7 +7,6 @@ This repository presents the design of Dynamic-gate-control-based-4-stage-charge
 # Table of Contents
  * [Introduction](#introduction)
  * [Working](#working)
- * [Designing](#designing)
  * [Tools Used](#Tools-Used)
  * [Schematics and Simulations](#schematics-and-Simulations)
  * [Netlist](#netlist)
@@ -21,7 +20,7 @@ This repository presents the design of Dynamic-gate-control-based-4-stage-charge
 Reducing power consumption in modern VLSI circuits and systems has become significant research due to more demand of low power memory devices. To reduce power consumption, the power supply voltage tends to be scaled down. It also reduces noise margin and speed of operation, which is not favour in digital circuits. The performance of the low power memory device depends on physical mechanisms of oxide tunneling which need constant high voltage irrespective of the MOS technology and scaling. Furthermore, low power devices such as EEPROM and flash memories require higher voltage to perform write and erase operations. Consequently,to design on-chip memory circuits with low power supply voltage is very difficult and critical challenge for nonvolatile memory applications. However, this problem is solved by charge pump (CP) circuits. The CP circuit provides higher on-chip voltage with low power supply voltage. The CP circuit utilize charge transfer switches (CTS) for transferring charges and pumping capacitors as energy storage elements. CP circuits are used in nearly all EEPROM and flash memory devices.The CP circuit is also used in the power managementblocks of liquid-crystal-display (LCD) panels and quiescent touch sensor power supply circuits.
 
 # Working
-The voltage difference between N-th and (N?1)- th stage nodes at the end of each pumping cycle is given by VNþ1  VN ¼ VC  VT  VM ð1Þ where VC is the voltage change at each node due to capacitive coupling by clock, VT is the threshold voltage drop of diode connected NMOS, VM is the voltage by which the capacitors are charged and discharged when the CP is supplying output current IOUT
+The voltage difference between 1st and last stage nodes at the end of each pumping cycle is given by V1 - Vn = N(VC - VT - VM) where VC is the voltage change at each node due to capacitive coupling by clock, VT is the threshold voltage drop of diode connected NMOS, VM is the voltage by which the capacitors are charged and discharged when the CP is supplying output current Iout and N is the number of Stages
 
 VOUT  VIN ¼ N
 C
@@ -32,16 +31,9 @@ C þ CP
 ð Þ C þ CP f
  
 
-In dynamic gate control based CP the active control of
-substrate terminal voltage of the PMOS CTS is provided by
-two auxiliary PMOS transistors based on. While the dynamic gate control is provided by one PMOS and one
-NMOS [2]. In dynamic gate control based CP the gate
-terminal voltage of CTS PMOS is controlled to reduce the
-ON resistance of the CTS PMOS. As the voltage step per
-stage in the CP is given by
+In dynamic gate control based CP the active control of substrate terminal voltage of the PMOS CTS is provided by two auxiliary PMOS transistors based on. While the dynamic gate control is provided by one PMOS and one NMOS [2]. In dynamic gate control based CP the gate terminal voltage of CTS PMOS is controlled to reduce the ON resistance of the CTS PMOS. As the voltage step per stage in the CP is given by
 
-
-# Designing
+Here C/Cp = a is a technology dependent parameter. As the gain and efficiency depends on the step size voltage at capacitor nodes. Therefore to increase the voltage gain and efficiency we need to increase the step size voltage change at the pumping capacitors. And this can be done only by reducing ROUT of PMOS pass transistors. ROUT is inversely proportional to the operating clock frequency and directly proportional to RON, the ON resistance of CTS PMOS. By using gate control scheme higher gate to source voltage is provided, by which the RON is reduced and voltage gain is increased.The four stage dynamic gate control based CP is shownin Fig. 5. Considering the second stage when Clk1 = 0 and Clk2 = VDD then PMOS in the gate control block P2 turns ON, shorting gate and source of the pass transistor P2. Which turns P2 OFF. Now when Clk1 = VDD and Clk2 = 0 then NMOS N2 in the gate control block turns ON and the gate terminal of PMOS P2 is connected to ground through N2. Which makes P2 to enter into linear region and charge transfer takes place from one pumping capacitor to another through P2 with low resistance. As charge is transferred from one stage to another the node voltages in the higher stages increase. And with increase in node voltages, gate to source voltages of PMOS CTS also increase which further reduces the ON resistance of PMOS CTS.
 
 # Tools Used:
 
