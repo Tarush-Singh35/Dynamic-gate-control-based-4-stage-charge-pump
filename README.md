@@ -92,7 +92,8 @@ This is basically used to plot any output attribute over varying input attribute
 
 # Netlist:
 
-Refer to the netlist of the circuit here: <a href='Netlist and Logs/Dynamic_CP_Parametric.cir'>Dynamic Gate Charge Pump Circuit</a>
+- Refer to the netlist of the circuit here: <a href='Netlist and Logs/Dynamic_CP.cir'>Dynamic Gate Charge Pump Circuit</a>
+- Refer to the netlist of the circuit with parameteric sweep here: <a href='Netlist and Logs/Dynamic_CP_Parametric.cir'>Dynamic Gate Charge Pump Circuit With Varying Voltage</a>
 
 # Observations:
 - The output voltage is 5V .The voltage gain has significantly improved as threshold voltage drop is removed and ON resistance of Charge Transfer Switch is reduced. Further, the substrate bias effect in the Charge Pump circuitis also removed.However operated in Strong inversion region has caused this circuit to have a trade-of between gain and speed hence the circuit can be used for high speed application that is indicated with low rise time as stated above but it has low noise margin as well as low SNR this can be seen in the transient analysis.
