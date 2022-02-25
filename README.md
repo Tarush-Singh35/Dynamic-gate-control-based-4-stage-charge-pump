@@ -26,14 +26,14 @@ Reducing power consumption in modern VLSI circuits and systems has become signif
 </p>
 The voltage difference between 1st and last stage nodes at the end of each pumping cycle is given by V1 - Vn = N(VC - VT - VM) where VC is the voltage change at each node due to capacitive coupling by clock, VT is the threshold voltage drop of diode connected NMOS, VM is the voltage by which the capacitors are charged and discharged when the CP is supplying output current Iout and N is the number of Stages
 
-VOUT  VIN ¼ N
-C
-C þ CP
- VClk  VT
-   ½  VT
- N IOUT
-ð Þ C þ CP f
- 
+            
+            weight 1  - a0b0
+            weight 2  - a0b1, a1b0
+            weight 4  - a0b2, a1b1, a2b0
+            weight 8  - a0b3, a3b0, a1b2, a2b1
+            weight 16 - a1a3, a2b2, a3b1
+            weight 32 - a2b3, a3b2
+            weight 64 - a3b3
 
 In dynamic gate control based CP the active control of substrate terminal voltage of the PMOS CTS is provided by two auxiliary PMOS transistors based on. While the dynamic gate control is provided by one PMOS and one NMOS [2]. In dynamic gate control based CP the gate terminal voltage of CTS PMOS is controlled to reduce the ON resistance of the CTS PMOS. As the voltage step per stage in the CP is given by
 
