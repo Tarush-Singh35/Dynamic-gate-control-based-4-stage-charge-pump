@@ -27,17 +27,13 @@ Reducing power consumption in modern VLSI circuits and systems has become signif
 The voltage difference between 1st and last stage nodes at the end of each pumping cycle is given by V1 - Vn = N(VC - VT - VM) where VC is the voltage change at each node due to capacitive coupling by clock, VT is the threshold voltage drop of diode connected NMOS, VM is the voltage by which the capacitors are charged and discharged when the CP is supplying output current Iout and N is the number of Stages
 
             
-            weight 1  - a0b0
-            weight 2  - a0b1, a1b0
-            weight 4  - a0b2, a1b1, a2b0
-            weight 8  - a0b3, a3b0, a1b2, a2b1
-            weight 16 - a1a3, a2b2, a3b1
-            weight 32 - a2b3, a3b2
-            weight 64 - a3b3
-
+             1) Vout = Vin + N[(C/C+Cp)*Vclk -Vt] - [Vt] - [N*Iout/(C+Cp)*f]
+            
 In dynamic gate control based CP the active control of substrate terminal voltage of the PMOS CTS is provided by two auxiliary PMOS transistors based on. While the dynamic gate control is provided by one PMOS and one NMOS. In dynamic gate control based CP the gate terminal voltage of CTS PMOS is controlled to reduce the ON resistance of the CTS PMOS. As the voltage step per stage in the CP is given by
 
 Here C/Cp = a is a technology dependent parameter. As the gain and efficiency depends on the step size voltage at capacitor nodes. Therefore to increase the voltage gain and efficiency we need to increase the step size voltage change at the pumping capacitors. And this can be done only by reducing ROUT of PMOS pass transistors. ROUT is inversely proportional to the operating clock frequency and directly proportional to RON, the ON resistance of CTS PMOS. By using gate control scheme higher gate to source voltage is provided, by which the RON is reduced and voltage gain is increased.The four stage dynamic gate control based CP is shownin Fig. 5. Considering the second stage when Clk1 = 0 and Clk2 = VDD then PMOS in the gate control block P2 turns ON, shorting gate and source of the pass transistor P2. Which turns P2 OFF. Now when Clk1 = VDD and Clk2 = 0 then NMOS N2 in the gate control block turns ON and the gate terminal of PMOS P2 is connected to ground through N2. Which makes P2 to enter into linear region and charge transfer takes place from one pumping capacitor to another through P2 with low resistance. As charge is transferred from one stage to another the node voltages in the higher stages increase. And with increase in node voltages, gate to source voltages of PMOS CTS also increase which further reduces the ON resistance of PMOS CTS.
+
+             2) Ron = 1/up*Cox*W/L(nVdd-Vt)
 
 # Tools Used:
 
